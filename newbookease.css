@@ -1,0 +1,320 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0047ab;
+  color: white;
+}
+
+.logo img {
+  height: 150px;
+  width: 60x;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #0047ab;
+  color: white;
+}
+
+button:hover {
+  background-color: #00338d;
+}
+
+/* Carousel Styles */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 50%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Contact Form */
+.contact-form {
+  margin: 20px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 30%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.services .service-buttons button {
+  margin: 10px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0047ab;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links img {
+  width: 15px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Our Services Section Styling */
+#our-services {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#our-services h1 {
+  font-size: 36px;
+  color: #0047ab;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.service {
+  margin: 30px 0;
+}
+
+.service-image {
+  width: 100%;
+  /* Responsive image */
+  max-width: 400px;
+  /* Max width for each image */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+.service h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 15px 0 10px 0;
+}
+
+.service p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header Slider Section */
+.header-slider {
+  position: relative;
+  height: 300px;
+  /* Adjust as needed */
+  background: url('slider-background.jpg') no-repeat center center/cover;
+  /* Replace with your slider image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.slider-content h1 {
+  font-size: 48px;
+  /* Adjust as needed */
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Animated Write-Up */
+.animated-write-up {
+  text-align: center;
+  margin-top: 20px;
+  /* Space between slider and text */
+}
+
+.animated-write-up p {
+  font-size: 28px;
+  /* Adjust font size */
+  color: #0047ab;
+  /* Change color as needed */
+  opacity: 0;
+  /* Initial state */
+  transform: translateY(20px);
+  /* Move text down */
+  animation: slideIn 1s ease forwards;
+  /* Animation */
+  animation-delay: 2s;
+  /* Delay before animation starts */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Move text up */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Back to original position */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Move text down */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Back to original position */
+  }
+}
+
+.blurred-background {
+  background-image: url('c:\Users\User\Pictures\images (2).jfif');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.blurred-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional: adds a dark overlay */
+  backdrop-filter: blur(10px);
+  /* Adjust blur strength */
+  z-index: 1;
+  /* Ensure overlay is above the background */
+}
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  /* Use flexbox for centering */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: center;
+  /* Center vertically */
+  align-items: center;
+  /* Center horizontally */
+  height: 100vh;
+  /* Full viewport height */
+  text-align: center;
+  /* Center text */
+  background-color: #f4f4f4;
+  /* Optional background color */
+}
+
+h1 {
+  font-size: 36px;
+  /* Font size for the header */
+  margin-bottom: 20px;
+  /* Space between header and paragraph */
+}
+
+p {
+  font-size: 18px;
+  /* Font size for the paragraph */
+  margin-bottom: 20px;
+  /* Space between paragraph and button */
+}
+
+button {
+  padding: 10px 20px;
+  /* Padding for button */
+  font-size: 16px;
+  /* Font size for button */
+  border: none;
+  /* Remove border */
+  background-color: #0047ab;
+  /* Button background color */
+  color: white;
+  /* Button text color */
+  cursor: pointer;
+  /* Change cursor on hover */
+  border-radius: 5px;
+  /* Rounded corners */
+  transition: background-color 0.3s;
+  /* Transition effect */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #003295;
+  /* Darker shade on hover */
+}
